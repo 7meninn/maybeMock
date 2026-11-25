@@ -34,6 +34,7 @@
 - [ ] DSA: 49 Group Anagrams, 347 Top K Frequent, 238 Product Except Self, 283 Move Zeroes, 26 Remove Duplicates
 - [ ] Concepts: shallow vs deep copy, pass by reference, for…in vs for…of, destructuring/spread/rest, property descriptors
 - [ ] Task: **T02 User Directory** + mentor wali Expense Dashboard task
+- [ ] Task: **T05 Comment Tree** (recursion + Map)
 
 ### Day 3 (27 Nov): Async JS + event loop (mentor ka favourite area)
 - [ ] Polyfills: `promiseAll`, `promiseAllSettled`, `promiseAny`, `promiseRace`, `promisify`, `debounce`, `throttle`
@@ -48,7 +49,7 @@
 - [ ] DSA: 3 Longest Substring w/o Repeating, 15 3Sum, 704 Binary Search, 206 Reverse Linked List
 - [ ] Concepts: prototype chain, class vs constructor fn, `extends`/`super`, static/private, getters/setters
 - [ ] TS (sirf important): types vs interfaces, unions, generics, `Partial`/`Omit`/`ReturnType`, access modifiers, abstract class. Practice: purane polyfills/tasks ko TS mein convert karo
-- [ ] Task: T04 (main dunga)
+- [ ] Task: **T04 Shopping Cart** (classes, `#private`, getters, custom errors)
 
 ### Day 5 (29 Nov): Browser + React I
 - [ ] DOM quick: event delegation, bubbling, `fetch`, debounced search (vanilla JS mini task)
@@ -62,6 +63,7 @@
 
 ### Day 7 (1 Dec): Node + Express + DB + mock
 - [ ] Express API for Task Manager: CRUD routes, validation + logger + error middleware, JWT-protected route, MVC structure
+- [ ] Task: **T06 Log Analyzer** (`fs/promises`, `path`, parsing)
 - [ ] Node Q&A: CommonJS vs ESM, npm/semver/package-lock, `fs` sync vs async, `EventEmitter`, streams (idea), Node event loop
 - [ ] **PostgreSQL vs MongoDB** (difference only, apne project ke example se)
 - [ ] Git Q&A: rebase vs merge, revert vs reset, cherry-pick, conflicts, branching strategy
