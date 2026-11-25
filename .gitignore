@@ -1,0 +1,8 @@
+# Mentor's internal interview template (private, not for public repo)
+*.mhtml
+*:Zone.Identifier
+
+# Tooling / OS
+.codemie/
+node_modules/
+.DS_Store
