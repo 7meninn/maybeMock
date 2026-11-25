@@ -14,7 +14,7 @@ const {
   promiseRace,
   promisify,
   EventEmitter,
-} = require("./polyfills");
+} = require(process.env.SOLUTIONS ? "./polyfills.solutions" : "./polyfills");
 
 const delay = (ms, value, fail = false) =>
   new Promise((resolve, reject) =>
@@ -46,6 +46,33 @@ describe("myCall / myApply / myBind", () => {
       return this.name;
     }
     assert.equal(getName.myApply(user), "Bimal");
+  });
+
+  test("myCall / myApply with null thisArg use globalThis (like native)", () => {
+    function whoAmI() {
+      return this === globalThis;
+    }
+    assert.equal(whoAmI.myCall(null), true);
+    assert.equal(whoAmI.myApply(undefined, []), true);
+  });
+
+  test("myApply does not overwrite an existing key on thisArg", () => {
+    function getName() {
+      return this.name;
+    }
+    const obj = { name: "o", functionToRun: "my data", fn: "my data" };
+    getName.myApply(obj, []);
+    assert.deepEqual(obj, { name: "o", functionToRun: "my data", fn: "my data" });
+  });
+
+  test("myApply cleans up even if the function throws", () => {
+    const obj = { name: "x" };
+    assert.throws(() =>
+      function () {
+        throw new Error("boom");
+      }.myApply(obj, [])
+    );
+    assert.deepEqual(Object.keys(obj), ["name"]);
   });
 
   test("myBind returns a bound function", () => {

@@ -11,6 +11,10 @@ Sirf ek topic ke tests:
 ```bash
 node --test --test-name-pattern="myBind" practice/polyfills/polyfills.test.js
 ```
+Atak jao ya apna answer compare karna ho, to `polyfills/polyfills.solutions.js` dekho (spoiler, pehle khud try karna). Same tests solutions pe chalane ke liye:
+```bash
+SOLUTIONS=1 node --test practice/polyfills/polyfills.test.js
+```
 
 ## Tasks
 Har task ke folder mein `README.md` (spec), `solution.js` (tumhara code) aur `solution.test.js` hain.
