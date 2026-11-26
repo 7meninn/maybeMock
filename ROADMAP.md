@@ -1,81 +1,74 @@
-# Interview Prep: Practice-First Plan (JS Fullstack + React, L1 + L2)
+# GC Prep: Final Interview on Monday, 30 Nov 2026
 
-**Deadline:** 2 Dec 2026 (7 din bache hain, aaj 25 Nov se)
-**Approach:** Theory alag se nahi padhni. **Code likhte hue concept test hoga.** Jahan atke, wahi concept 10 min mein mujhse samjho, aur phir wapas code pe lag jao.
-**Source:** `View Template.mhtml` (EPAM JS FullStack React template). Sirf interview-important L1/L2 topics.
+**Bacha time:** 4 din (Thu 26 → Sun 29 Nov). Monday ko GC hai.
+**GC mein kya aayega:** template ke L1/L2 topics + DSA.
+**Rule:** Sirf highest-ROI cheezein, priority order mein. Jo neeche ki priority ka hai, wo tabhi karna jab upar ka sab ho jaye.
+**Source:** `View Template.mhtml` (EPAM JS FullStack React template)
 
 ---
 
-## Har din ke 4 tracks (JS ke liye)
+## 📊 GC Readiness Tracker
 
-| Track | Kya | Kahan |
+Har session ke baad update hoga. Weight = interview mein us area ka andaazan hissa.
+
+| # | Area | Priority | Weight | Status | Confidence |
+|---|---|---|---|---|---|
+| 1 | JS core Q&A (scope, hoisting, closures, `this`, coercion, event loop, promises) | 🔴 P1 | 20 | 🟡 Drill done (14.75/24 ≈ 61%), Day 4 mock mein retest | 🟡 |
+| 2 | Polyfills | 🔴 P1 | 10 | ✅ Done (42/42) | 🟢 |
+| 3 | JS coding tasks (data processing + async) | 🔴 P1 | 10 | ⬜ | — |
+| 4 | DSA (arrays, hashing, two pointers, sliding window, stack, strings) | 🔴 P1 | 20 | ⬜ | — |
+| 5 | React (hooks, re-render, state/props, forms, context, custom hooks, router) | 🔴 P1 | 20 | ⬜ | — |
+| 6 | Node + Express (modules, npm, event loop, middleware, REST, errors, JWT) | 🟠 P2 | 8 | ⬜ | — |
+| 7 | TypeScript (types vs interface, generics, utility types, `infer`, decorators, OOP in TS) | 🟠 P2 | 5 | ⬜ | — |
+| 8 | OOP / prototypes / classes | 🟠 P2 | 3 | ⬜ | — |
+| 9 | Redux basics, HTML/CSS, Git, PostgreSQL vs MongoDB | 🟡 P3 | 4 | ⬜ | — |
+
+**GC readiness: 22 / 100** (polyfills 10 + JS core 12/20)
+
+Confidence: 🔴 kamzor · 🟡 theek-thaak · 🟢 interview-ready
+
+---
+
+## Day 1: Thu 26 Nov (JS core + DSA foundation)
+
+| Block | Time | Kya | Kaise |
+|---|---|---|---|
+| 1 | 2h | **JS core Q&A drill** with me: hoisting/TDZ, scope, closures, `this` (4 rules + arrow), `==` vs `===`/coercion, event loop output questions, promise chaining/error handling | Main questions dunga, tum bina dekhe jawab doge, galat wale wahin clear karenge |
+| 2 | 1h | **T01 Order Report** (25 min timer) + mentor ka **Expense Dashboard** (20 min) | Timer lagao, phir mujhse review |
+| 3 | 1h | **T03 Dashboard Loader** | Async ka real use (retry, timeout, `allSettled`) |
+| 4 | 3h | **DSA: arrays + hashing**: 1 Two Sum · 217 Contains Duplicate · 242 Valid Anagram · 49 Group Anagrams · 347 Top K Frequent · 238 Product Except Self · 121 Best Time to Buy/Sell · 283 Move Zeroes | Har problem 15–20 min. Na bane to approach mujhse poochho, code khud likho |
+| 5 | 30m | Revision: aaj ke galat answers `notes/mistakes.md` mein | — |
+
+## Day 2: Fri 27 Nov (React + DSA patterns)
+
+| Block | Time | Kya |
 |---|---|---|
-| **A. Polyfills** | `bind`, `map`, `reduce`, `Promise.all`, `debounce`, `curry`, `deepClone`, `EventEmitter`… | `practice/polyfills/` (39 tests) |
-| **B. Real-world tasks** | Data processing, pagination, async loading, mentor ke expense-dashboard jaisi tasks | `practice/tasks/` (T01–T03 ready, aur aate rahenge) |
-| **C. LeetCode "30 Days of JavaScript"** | JS-specific problems (closures, promises, timers, prototypes). Seedha polyfill-type questions hain | leetcode.com/studyplan/30-days-of-javascript |
-| **D. DSA in JS** | Arrays/strings/hashmap patterns, interview ke common problems | LeetCode (list neeche) |
+| 1 | 4h | **React hands-on:** chhota Task Manager app: `useState`, `useEffect` fetch (loading/error), list + keys, controlled form + validation, lifting state up, React Router (list/detail/new), Context, custom hook (`useFetch`/`useDebounce`), `React.memo`/`useCallback` sahi jagah |
+| 2 | 1h | **React Q&A drill:** re-render kab hota hai, Virtual DOM/reconciliation, keys, `useEffect` cleanup + dependency array, controlled vs uncontrolled, class lifecycle ↔ hooks mapping, HOC/render props, Context vs Redux |
+| 3 | 2.5h | **DSA: two pointers + sliding window + stack**: 125 Valid Palindrome · 167 Two Sum II · 15 3Sum · 11 Container With Most Water · 3 Longest Substring w/o Repeating · 20 Valid Parentheses · 155 Min Stack |
 
-**Daily loop:** problem try karo (15–25 min, bina AI ke) → tests chalao → mujhe code dikhao → main review + cross-questions karunga ("ye `this` kyun undefined hua?") → concept wahin clear ho jayega.
+## Day 3: Sat 28 Nov (Backend + TS + OOP + DSA)
 
----
+| Block | Time | Kya |
+|---|---|---|
+| 1 | 2.5h | **Express API** for the Task Manager: CRUD routes, validation + logger + error middleware, JWT-protected route, MVC folders. Saath mein Node Q&A: CommonJS vs ESM, npm/semver/package-lock, Node event loop, `fs` sync vs async, EventEmitter, REST vs GraphQL, stateless |
+| 2 | 2h | **TypeScript (template ka poora L1 + L2):** primitives, unions, function types, custom types (`type`), `interface` vs `type`, `readonly`, classes + `implements` + inheritance, access modifiers (`public`/`private`/`protected`), abstract class, generic functions + generic classes, `Partial`/`Omit`/`ReturnType`, **`infer`** (khud ka `MyReturnType` likho), **decorators** (concept + ek simple `@log` decorator), TS module system/resolution (`tsconfig` basics). **Practice:** T01 + T04 ko TS mein convert karo, generic `Stack<T>` banao |
+| 3 | 1h | **T04 Shopping Cart** (classes, `#private`, getters, custom errors) + prototype chain Q&A |
+| 4 | 2h | **DSA: binary search + linked list + misc**: 704 Binary Search · 206 Reverse Linked List · 21 Merge Two Sorted Lists · 141 Linked List Cycle · 53 Maximum Subarray · 70 Climbing Stairs |
 
-## 7-day plan
+## Day 4: Sun 29 Nov (Mock + weak areas)
 
-### Day 1 (25 Nov): Closures, `this`, functions
-- [ ] Polyfills: `myCall`, `myApply`, `myBind`, `once`, `memoize`, `curry`
-- [ ] LC 30 Days: 2667, 2620, 2704, 2665, 2629, 2703, 2666, 2623
-- [ ] DSA: 1 Two Sum, 217 Contains Duplicate, 242 Valid Anagram
-- [ ] Concepts jo test honge: hoisting/TDZ, scope, `this` ke 4 rules, closures, `==` vs `===`/coercion
-- [ ] Task: **T01 Order Report**
+| Block | Time | Kya |
+|---|---|---|
+| 1 | 2h | **Full mock GC** with me: JS Q&A → live coding task → DSA problem → React → Node, bilkul interview format |
+| 2 | 3h | Mock mein jo 🔴 nikle, sirf wahi fix karo |
+| 3 | 1.5h | **P3 quick theory:** Redux flow (action → reducer → store, thunk), HTML semantic tags, CSS box model/flexbox/positioning, Git (rebase vs merge, revert vs reset), PostgreSQL vs MongoDB |
+| 4 | 1h | Polyfills dobara bina dekhe: `bind`, `Promise.all`, `debounce`, `curry`, `deepClone` |
 
-### Day 2 (26 Nov): Arrays + objects
-- [ ] Polyfills: `myMap`, `myFilter`, `myReduce`, `deepClone`, `flatten`
-- [ ] LC 30 Days: 2635, 2634, 2626, 2677, 2619, 2631, 2724, 2722, 2625, 2705, 2727
-- [ ] DSA: 49 Group Anagrams, 347 Top K Frequent, 238 Product Except Self, 283 Move Zeroes, 26 Remove Duplicates
-- [ ] Concepts: shallow vs deep copy, pass by reference, for…in vs for…of, destructuring/spread/rest, property descriptors
-- [ ] Task: **T02 User Directory** + mentor wali Expense Dashboard task
-- [ ] Task: **T05 Comment Tree** (recursion + Map)
-
-### Day 3 (27 Nov): Async JS + event loop (mentor ka favourite area)
-- [ ] Polyfills: `promiseAll`, `promiseAllSettled`, `promiseAny`, `promiseRace`, `promisify`, `debounce`, `throttle`
-- [ ] LC 30 Days: 2723, 2621, 2715, 2725, 2637, 2622, 2627, 2721
-- [ ] DSA: 20 Valid Parentheses, 125 Valid Palindrome, 121 Best Time to Buy/Sell Stock
-- [ ] Concepts: event loop output questions (microtask vs macrotask), callback hell, async error handling, custom errors
-- [ ] Task: **T03 Dashboard Loader**
-
-### Day 4 (28 Nov): OOP, prototypes, TypeScript
-- [ ] Polyfills: `EventEmitter`, calculator with method chaining
-- [ ] LC 30 Days: 2694 Event Emitter, 2695 Array Wrapper, 2726 Calculator with Method Chaining
-- [ ] DSA: 3 Longest Substring w/o Repeating, 15 3Sum, 704 Binary Search, 206 Reverse Linked List
-- [ ] Concepts: prototype chain, class vs constructor fn, `extends`/`super`, static/private, getters/setters
-- [ ] TS (sirf important): types vs interfaces, unions, generics, `Partial`/`Omit`/`ReturnType`, access modifiers, abstract class. Practice: purane polyfills/tasks ko TS mein convert karo
-- [ ] Task: **T04 Shopping Cart** (classes, `#private`, getters, custom errors)
-
-### Day 5 (29 Nov): Browser + React I
-- [ ] DOM quick: event delegation, bubbling, `fetch`, debounced search (vanilla JS mini task)
-- [ ] CSS quick: box model, flexbox, positioning, media queries (sirf interview Q&A level)
-- [ ] React build: **Task Manager** (state, props, lists + keys, controlled form, `useEffect` fetch, lifting state up)
-- [ ] Concepts: re-render kab hota hai, Virtual DOM, controlled vs uncontrolled
-
-### Day 6 (30 Nov): React II
-- [ ] Same app mein add karo: React Router (`/tasks`, `/tasks/:id`, `/tasks/new`), Context ya Redux Toolkit, custom hooks (`useFetch`, `useDebounce`), `React.memo`/`useCallback`/`useMemo` sahi jagah
-- [ ] Concepts: HOC, render props, refs, Context vs Redux, Redux flow + thunk
-
-### Day 7 (1 Dec): Node + Express + DB + mock
-- [ ] Express API for Task Manager: CRUD routes, validation + logger + error middleware, JWT-protected route, MVC structure
-- [ ] Task: **T06 Log Analyzer** (`fs/promises`, `path`, parsing)
-- [ ] Node Q&A: CommonJS vs ESM, npm/semver/package-lock, `fs` sync vs async, `EventEmitter`, streams (idea), Node event loop
-- [ ] **PostgreSQL vs MongoDB** (difference only, apne project ke example se)
-- [ ] Git Q&A: rebase vs merge, revert vs reset, cherry-pick, conflicts, branching strategy
-- [ ] **Full mock interview** with me (JS + polyfill + task + React + Node)
-
-### 2 Dec: Interview day 💪
-Subah sirf polyfills ek baar dobara likho (bina dekhe) aur weak notes revise karo.
+## Mon 30 Nov: GC 💪
+Subah 30 min: `notes/mistakes.md` + top 5 polyfills ek baar. Bas, aur kuch naya nahi.
 
 ---
 
-## DSA bonus list (time mile to)
-88 Merge Sorted Array · 169 Majority Element · 14 Longest Common Prefix · 53 Maximum Subarray · 70 Climbing Stairs · 21 Merge Two Sorted Lists · 141 Linked List Cycle · 56 Merge Intervals · 11 Container With Most Water · 739 Daily Temperatures
-
-## Boot.dev
-Ab main track nahi hai. Kisi concept pe atko to Boot.dev Learn JavaScript ka us topic wala chapter (Promises, Event Loop, Prototypes) reference ki tarah dekh lo, bas.
+## Cut list (time na bache to skip)
+T02 User Directory · T05 Comment Tree · T06 Log Analyzer · LeetCode 30 Days ke baaki problems · MobX · Swagger · decorators · streams deep · AWS/Azure
